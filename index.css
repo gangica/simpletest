@@ -1,0 +1,141 @@
+@font-face {
+  font-family: "CalibreMedium";
+  src: url(assets/font/CalibreMedium.otf);
+}
+
+@font-face {
+  font-family: "CalibreLight";
+  src: url(assets/font/CalibreLight.otf);
+}
+
+html {
+  font-size: 18px;
+  font-family: "CalibreMedium";
+}
+
+p, li {
+  font-family: "CalibreLight";
+}
+
+h3, p, ul {
+  margin: 0
+}
+
+header {
+  text-align: center
+}
+
+body {
+  min-height: 100vh;
+  margin: 0 14rem;
+}
+
+.divider {
+  background-color: rgb(37, 170, 225);
+  height: 4px;
+  width: 10rem;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.flex-start {
+  display: flex;
+  align-items: start;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-end {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.w-full {
+  width: 100%
+}
+
+.w-80 {
+  width: 80%
+}
+
+article {
+  margin-bottom: 10rem;
+  margin-top: 5rem;
+}
+
+section, .mini-section {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.column-50 {
+  width: 50%;
+}
+
+.column-60 {
+  width: 60%
+}
+
+.column-40 {
+  width: 40%
+}
+
+.column-icon {
+  width: 4rem;
+  margin-right: 1rem
+}
+
+.column-description {
+  padding-left: 3rem;
+  line-height: 1.5rem
+}
+
+.leading-space {
+  line-height: 2rem
+}
+
+.player {
+  position: relative;
+  background-color: rgb(224, 224, 224);
+  min-height: 12rem;
+  width: 100%
+}
+
+#play {
+  width: 4rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+/* Small screen devices (600px and above) */
+@media only screen and (max-width: 600px) {
+  body {
+    margin: 0;
+    font-size: 10px;
+  }
+
+  .column-40, .column-60 {
+    width: 100%
+  }
+
+  /* .flex-start, .flex-center {
+    display: block;
+  } */
+}
