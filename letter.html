@@ -4,9 +4,325 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="letter.css" />
+  <!-- <link rel="stylesheet" href="letter.css" /> -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
   <title>Letter</title>
+
+  <style>
+    body {
+      background-color: #f5f6fb;
+      font-family: 'Lato';
+      margin: 0
+    }
+
+    main {
+      margin: 0;
+      padding: 0 2.5rem;
+      border-radius: 0;
+      background-color: white;
+      height: auto;
+    }
+
+    #logo-container {
+      text-align: center;
+    }
+
+    #logo {
+      width: 30.5rem;
+      margin-top: 6.25rem;
+      margin-bottom: 10rem;
+    }
+
+    p {
+      font-size: 2.875rem;
+      line-height: 1.4;
+      margin: 0
+    }
+
+    #table {
+      margin-bottom: 5.625rem;
+    }
+
+    #table-header,
+    #table-content {
+      padding: 2.188rem;
+    }
+
+    #table-header {
+      height: 5.625rem;
+      font-size: 2.625rem;
+      padding: 0 2.188rem;
+      color: white;
+      background-color: #4099c0;
+      text-align: left;
+      font-weight: 700;
+    }
+
+    #table-content {
+      background-color: #edf4fc;
+      height: auto
+    }
+
+    .mb-90,
+    .paragraph>p,
+    .paragraph>img {
+      margin-bottom: 5.625rem
+    }
+
+    .detail-section {
+      margin-bottom: 5.625rem;
+    }
+
+    .detail-section>h3 {
+      font-size: 2.5rem;
+      color: #38b0dd;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .detail-section>h3:first-child {
+      margin-top: 1.875rem;
+      margin-bottom: 2.5rem
+    }
+
+    .detail-item {
+      width: 18.75rem;
+    }
+
+    .detail-circle {
+      width: 15.625rem;
+      height: 15.625rem;
+
+      background-color: white;
+      border-radius: 100%;
+    }
+
+    .detail-circle>span {
+      font-size: 2.875rem;
+      color: #282828;
+      font-weight: 700
+    }
+
+    .detail-circle.active {
+      background-color: #38b0dd;
+    }
+
+    .detail-circle.active>span {
+      color: white
+    }
+
+    .detail-description {
+      margin-top: 3.75rem;
+      margin-bottom: 0;
+    }
+
+    .detail-total {
+      border-radius: 20px;
+      height: 7.5rem;
+      margin-top: 0.625rem;
+      background-color: white;
+    }
+
+    .detail-total>span {
+      font-size: 3.75rem;
+      color: #38b0dd;
+      font-weight: 900;
+    }
+
+    .paragraph>h1 {
+      font-size: 3.5rem;
+      font-weight: 900;
+      margin-top: 0;
+      margin-bottom: 1.875rem;
+      font-style: italic;
+    }
+
+    .paragraph>img {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .icon-footer {
+      width: 5.5rem;
+      margin: 0 1.25rem
+    }
+
+    .footer-icons {
+      margin-top: 4.375rem;
+      margin-bottom: 3.125rem;
+    }
+
+    .copyright>p {
+      font-size: 1.875rem;
+      margin-bottom: 5.625rem;
+      color: #666666;
+      font-weight: 400;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    /* flex */
+    .flex {
+      display: flex;
+    }
+
+    .flex-center {
+      display: flex;
+      align-items: center;
+    }
+
+    .flex-content-center {
+      justify-content: center;
+    }
+
+    .flex-content-between {
+      justify-content: space-between;
+    }
+
+    .flex-column {
+      flex-direction: column;
+    }
+
+    /* text color */
+    .text-main-color {
+      color: #38b0dd
+    }
+
+    /* font-weight */
+    .text-bold-700 {
+      font-weight: 700;
+    }
+
+    @media only screen and (max-width: 600px) {
+      html {
+        font-size: 6px;
+      }
+    }
+
+    @media only screen and (max-width: 820px) and (min-width: 601px) {
+      html {
+        font-size: 8px;
+      }
+    }
+
+    @media only screen and (min-width: 1081px) {
+      main {
+        width: 31.875rem;
+        margin: 0 auto;
+        margin-top: 65px;
+        padding: 0 2.813rem;
+        border-radius: 20px;
+      }
+
+      #logo-container {
+        text-align: left;
+      }
+
+      #logo {
+        width: 10.125rem;
+        margin-top: 3.75rem;
+        margin-bottom: 3.125rem;
+      }
+
+      .paragraph>h1 {
+        font-size: 1.875rem;
+      }
+
+      p {
+        font-size: 1rem
+      }
+
+      #table {
+        margin-bottom: 1.875rem;
+      }
+
+      #table-header,
+      #table-content {
+        padding: 1.875rem;
+      }
+
+      #table-header {
+        height: 2.188rem;
+        font-size: 1.125rem;
+        padding: 0 1.875rem;
+      }
+
+      .detail-section {
+        margin-bottom: 1.875rem;
+      }
+
+      .detail-section:last-child {
+        margin-bottom: 0
+      }
+
+      .detail-section>h3 {
+        margin: 0;
+        font-size: 1.125rem;
+        color: #282828;
+        font-weight: 700;
+        text-transform: none;
+      }
+
+      .detail-section>h3:first-child {
+        margin-top: 0;
+        margin-bottom: 1.25rem
+      }
+
+      .detail-circle {
+        width: 5.438rem;
+        height: 5.438rem;
+      }
+
+      .detail-circle>span {
+        font-size: 1.125rem;
+      }
+
+      .detail-item {
+        width: 9.375rem;
+      }
+
+      .detail-description {
+        margin-top: 0.938rem;
+        margin-bottom: 0;
+      }
+
+      .detail-total {
+        border-radius: 10px;
+        height: 3.75rem;
+      }
+
+      .detail-total>span {
+        font-size: 1.5rem;
+      }
+
+      .icon-footer {
+        width: 1.688rem;
+        margin: 0 0.313rem
+      }
+
+      .footer-icons {
+        margin: 1.875rem 0
+      }
+
+      .copyright>p {
+        font-size: 0.875rem;
+        margin-bottom: 6.25rem;
+      }
+
+      /* margin */
+      .paragraph>p,
+      .paragraph>img {
+        margin-bottom: 1.875rem
+      }
+
+      .paragraph>img {
+        margin-left: -0.938rem;
+        width: auto
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -22,7 +338,7 @@
       <p>
         Your <span class="text-bold-700">[castle name]</span> has successfully been sold to <span
           class="text-bold-700">[buyer name]</span> for
-        <span class="text-main-color text-bold-700">[selling price].</span>
+        <span class="text-main-color text-bold-700">[selling price]</span>.
       </p>
     </div>
 
@@ -89,8 +405,10 @@
     </div>
 
     <div class="paragraph">
-      <p>For further information about the revenue share, please check <a href="">this article</a>.<br />
-        To check your balance, please go to <a href="">PA Wallet</a>.</p>
+      <p>For further information about the revenue share, please check <span class="text-main-color"
+          style="text-decoration: underline">this article</span>.<br />
+        To check your balance, please go to <span class="text-main-color" style="text-decoration: underline">PA
+          Wallet</span>.</p>
       <p>This is an automated email - Please <span class="text-bold-700">don't reply</span> to this email.</p>
       <p>Best Regards,<br />
         Pocket Arena Team.</p>
