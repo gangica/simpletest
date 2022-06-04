@@ -1,6 +1,7 @@
 body {
   background-color: #f5f6fb;
   font-family: 'Lato';
+  margin: 0
 }
 
 main {
@@ -32,20 +33,11 @@ p {
   line-height: 1.4;
 }
 
-table {
-  margin-bottom: 1.875rem;
+#table-header, #table-content {
+  padding: 1.875rem;
 }
 
-table tr {
-  width: 62.5rem;
-}
-
-table th, table td {
-  padding: 0 1.875rem;
-  width: 62.5rem;
-}
-
-table th {
+#table-header {
   color: white;
   height: 2.188rem;
   background-color: #4099c0;
@@ -55,9 +47,9 @@ table th {
   font-weight: 700;
 }
 
-table tr:nth-child(2) {
+#table-content {
   background-color: #edf4fc;
-  height: 10rem;
+  height: auto;
 }
 
 .detail-section {
@@ -65,11 +57,11 @@ table tr:nth-child(2) {
 }
 
 .detail-section > h3 {
+  margin: 0;
   font-size: 1.125rem;
 }
 
 .detail-section > h3:first-child {
-  margin-top: 1.125rem;
   margin-bottom: 1.25rem
 }
 
@@ -179,9 +171,8 @@ table tr:nth-child(2) {
 }
 
 @media only screen and (max-width: 1080px) {
-  body {
-    margin: 0;
-    font-size: 16px;
+  html {
+    font-size: 6px;
   }
 
   main {
@@ -205,28 +196,19 @@ table tr:nth-child(2) {
     font-size: 2.875rem;
   }
 
-  table {
-    margin-bottom: 5.625rem;
+  #table-header, #table-content  {
+    padding: 2.188rem;
   }
 
-  table tr {
-    width: 62.5rem;
-  }
-  
-  table th, table td {
-    padding: 0 2.188rem;
-    width: 62.5rem;
-  }
-
-  table th {
+  #table-header {
     height: 5.625rem;
     font-size: 2.625rem;
     padding: 0 2.188rem;
   }
 
-  table tr:nth-child(2) {
+  #table-content {
     background-color: #edf4fc;
-    height: 10rem
+    height: auto
   }
 
   .mb-90, .paragraph > p, .paragraph > img {
@@ -245,12 +227,11 @@ table tr:nth-child(2) {
   }
 
   .detail-section > h3:first-child {
-    margin-top: 3.75rem;
+    margin-top: 1.875rem;
     margin-bottom: 2.5rem
   }
 
   .detail-item {
-    /* width: 33.33%; */
     width: 18.75rem;
   }
 
