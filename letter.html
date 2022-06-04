@@ -10,19 +10,22 @@
 </head>
 
 <body>
-  <div id="content">
-    <header>
-      <div class="center">
-        <img src="https://pocketarena.com/images/static/pa_logo_mailform.png" alt="logo" id="logo" />
-      </div>
-    </header>
-    <main>
-      <div class="intro">
-        <h1>Dear Jason</h1>
-        <p>Your <strong>[castle name]</strong> has successfully been sold to <strong>[buyer name]</strong> for
-          <strong>[selling price]</strong></p>
-      </div>
+  <main>
+    <div id="logo-container">
+      <img src="https://pocketarena.com/images/static/pa_logo_mailform.png" alt="logo" id="logo" />
+    </div>
 
+    <div class="paragraph">
+      <h1>
+        Dear Jason,
+      </h1>
+      <p>
+        Your <span class="text-bold-700">[castle name]</span> has successfully been sold to <span class="text-bold-700">[buyer name]</span> for
+        <span class="text-main-color text-bold-700">[selling price].</span>
+      </p>
+    </div>
+
+    <div style="overflow-x:auto">
       <table>
         <tr>
           <th>
@@ -32,33 +35,85 @@
         <tr>
           <td>
             <div class="detail-section">
-              <h3>Revenue</h3>
-              <div class="detail-box">
-                <div class="detail-item">
-                  <div class="detail-circle active">
-                    <span>$300</span>
+              <h3>1. Revenue:</h3>
+              <div class="flex flex-content-between">
+                <div class="detail-item flex-center text-center flex-column">
+                  <div class="detail-circle flex-center flex-content-center active">
+                    <span>€300</span>
                   </div>
-                  <p class="active">You have bought the castle at price</p>
+                  <p class="detail-description text-bold-700">You have bought the castle at price</p>
                 </div>
-                <div class="detail-item">
-                  <div class="detail-circle">
-                    <span>$300</span>
+                <div class="detail-item flex-center text-center flex-column">
+                  <div class="detail-circle flex-center flex-content-center">
+                    <span>€1,000</span>
                   </div>
-                  <p>You have bought the castle at price</p>
+                  <p class="detail-description">You have sold the castle at price</p>
                 </div>
-                <div class="detail-item">
-                  <div class="detail-circle">
-                    <span>$300</span>
+                <div class="detail-item flex-center text-center flex-column">
+                  <div class="detail-circle flex-center flex-content-center">
+                    <span>€700</span>
                   </div>
-                  <p>You have bought the castle at price</p>
+                  <p class="detail-description">Revenue from this sell</p>
                 </div>
+              </div>
+            </div>
+  
+            <div class="detail-section">
+              <h3>2. Revenue is divided to:</h3>
+              <div class="flex flex-content-between">
+                <div class="detail-item flex-center text-center flex-column">
+                  <div class="detail-circle flex-center flex-content-center">
+                    <span>€126</span>
+                  </div>
+                  <p class="detail-description">Players' revenue share</p>
+                </div>
+                <div class="detail-item flex-center text-center flex-column">
+                  <div class="detail-circle flex-center flex-content-center">
+                    <span>€28</span>
+                  </div>
+                  <p class="detail-description">Emoji Games' revenue share</p>
+                </div>
+                <div class="detail-item flex-center text-center flex-column">
+                  <div class="detail-circle flex-center flex-content-center active">
+                    <span>€546</span>
+                  </div>
+                  <p class="detail-description text-bold-700">Your revenue share</p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="detail-section">
+              <h3>3. You have received:</h3>
+              <div class="detail-total flex-center flex-content-center">
+                <span>€846</span>
               </div>
             </div>
           </td>
         </tr>
       </table>
-    </main>
-  </div>
+    </div>
+    
+
+    <div class="paragraph">
+      <p>For further information about the revenue share, please check <a href="">this article</a>.<br />
+        To check your balance, please go to <a href="">PA Wallet</a>.</p>
+      <p>This is an automated email - Please <span class="text-bold-700">don't reply</span> to this email.</p>
+      <p>Best Regards,<br />
+        Pocket Arena Team.</p>
+      <img src="https://pocketarena.com/images/static/banner_castle_defense.png" />
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-icons flex-center flex-content-center">
+      <img src="https://pocketarena.com/assets/main/bottom/icon_telegram_w.png" class="icon-footer">
+      <img src="https://pocketarena.com/assets/main/bottom/icon_facebook_w.png" class="icon-footer">
+      <img src="https://pocketarena.com/assets/main/bottom/icon_twitter_w.png" class="icon-footer">
+    </div>
+    <div class="copyright flex-center flex-content-center">
+      <p>All Rights Reserved © 2012-2021 Emoji Games GmbH</p>
+    </div>
+  </footer>
 </body>
 
 </html>
